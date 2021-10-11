@@ -1,0 +1,21 @@
+#include <stdio.h>
+//Video 2 Como usar correctamente los punteros en C
+void intercambia(int* , int*);
+int main(void){
+	int a=7, b=8;
+	
+	printf("a=%d b=%d\n", a, b);
+	intercambia(&a, &b);
+	printf("a=%d b=%d\n", a, b);
+	
+	return 0;
+}
+
+void intercambia(int *x, int *y){
+	
+	int z;
+	
+	z=*x;
+	*x=*y;
+	*y=z;
+}
